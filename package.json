@@ -1,0 +1,63 @@
+{
+  "name": "@kud/gandi",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Typed Gandi v5 API client — shared core for CLI, MCP, and Ink surfaces",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "build:watch": "tsup --watch",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "gandi",
+    "dns",
+    "livedns",
+    "domains",
+    "web-redirect",
+    "api"
+  ],
+  "homepage": "https://www.npmjs.com/package/@kud/gandi",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kud/gandi.git"
+  },
+  "author": "kud",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "smol-toml": "1.6.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "@types/node": "26.1.2",
+    "eslint": "10.8.0",
+    "eslint-config-prettier": "10.1.8",
+    "tsup": "8.5.1",
+    "typescript": "5.9.3",
+    "typescript-eslint": "8.65.0",
+    "vitest": "4.1.10"
+  }
+}
