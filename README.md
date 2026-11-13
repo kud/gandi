@@ -1,10 +1,25 @@
-# @kud/gandi
+<div align="center">
 
-Typed Gandi v5 REST API client — the headless core shared by `@kud/gandi-cli`, a future `@kud/gandi-ink` browser UI, and potentially an MCP server.
+<img src="assets/icon.svg" width="128" alt="Gandi icon" />
 
-It talks to Gandi's domain, LiveDNS, and token-introspection endpoints and returns plain typed data. It has no CLI, no UI, and no opinion about how you present the result — that's every consumer's own job.
+🌐
+
+# Gandi
+
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=node.js&logoColor=white)
+![npm](https://img.shields.io/npm/v/%40kud%2Fgandi?style=flat-square&color=CB3837)
+![MIT](https://img.shields.io/badge/licence-MIT-22C55E?style=flat-square)
+
+**Typed Gandi v5 REST API client — the headless core shared by @kud/gandi-cli and future Gandi surfaces**
+
+<a href="https://kud.io/projects/gandi">Website</a> · <a href="https://kud.io/projects/gandi/docs">Documentation</a>
+
+</div>
 
 ## Features
+
+The headless core shared by `@kud/gandi-cli`, a future `@kud/gandi-ink` browser UI, and potentially an MCP server. It talks to Gandi's domain, LiveDNS, and token-introspection endpoints and returns plain typed data. It has no CLI, no UI, and no opinion about how you present the result — that's every consumer's own job.
 
 - **Domains** — list, fetch, availability check, renew, toggle autorenew.
 - **LiveDNS records** — list, get, set (replace), add a value to an existing rrset, delete, export the whole zone as a BIND master file.
@@ -12,7 +27,7 @@ It talks to Gandi's domain, LiveDNS, and token-introspection endpoints and retur
 - **Token introspection** — check what a token can do and when it expires, before you find out the hard way.
 - **API key resolution** — `GANDI_API_KEY` env var first, `~/.config/gandi/config.toml` as a fallback.
 - **Injectable client** — the same functions wrapped as a `GandiAPI` object, so a consumer can accept `api?: GandiAPI` as a prop and swap in a mock for tests.
-- **ESM-only**, fully typed, zero runtime dependencies beyond a TOML parser.
+- **ESM-only** — fully typed, zero runtime dependencies beyond a TOML parser.
 
 ## Install
 
@@ -157,6 +172,8 @@ Every function's first parameter is `apiKey: string`, omitted below for brevity.
 ## Development
 
 ```sh
+git clone https://github.com/kud/gandi.git
+cd gandi
 npm install
 npm test          # vitest run
 npm run typecheck  # tsc --noEmit
@@ -169,3 +186,5 @@ npm run build      # tsup → dist/
 ## Licence
 
 MIT © kud
+
+📚 **Full documentation → [gandi/docs](https://kud.io/projects/gandi/docs)**
