@@ -34,7 +34,7 @@
     "web-redirect",
     "api"
   ],
-  "homepage": "https://www.npmjs.com/package/@kud/gandi",
+  "homepage": "https://kud.io/projects/gandi",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kud/gandi.git"
